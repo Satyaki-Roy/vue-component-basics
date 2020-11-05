@@ -7,6 +7,7 @@
       <li><strong>Phone:</strong>{{phoneNumber}}</li>
       <li><strong>Email:</strong>{{emailAddress}}</li>
     </ul>
+    <button @click="triggerDeleteFriend">Delete</button>
   </li>
 </template>
 
@@ -47,6 +48,9 @@ export default {
     },
     toggleFav() {
       this.$emit('toggle-fav', this.id);
+    },
+    triggerDeleteFriend() {
+      this.$emit('delete-friend', this.id);
     }
   },
 }
